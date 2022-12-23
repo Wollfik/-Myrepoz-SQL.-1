@@ -7,6 +7,7 @@
 
 
 ```
+
 select distinct address
 from address
 where address like '% K%a %';
@@ -16,6 +17,8 @@ where address like '% K%a %';
 ### Задание 2
 
 `Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года включительно и стоимость которых превышает 10.00.`
+
+```
 
 select payment_id, amount, payment_date
 from payment
@@ -28,10 +31,12 @@ where amount > 10 and payment_date between '2005-06-15' and '2005-06-18';
 `Получите последние пять аренд фильмов.`
 
 ```
+
 SELECT rental_id, rental_date
 from rental
 ORDER BY rental_date DESC
 LIMIT 5;
+
 ```
 
 
