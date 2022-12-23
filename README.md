@@ -51,10 +51,18 @@ LIMIT 5;
 
 
 ```
-Поле для вставки кода...
-....
-....
-....
-....
+select customer_id, first_name, last_name
+from customer
+where first_name = 'Kelly' or first_name = 'Willie';
+
+# В нижний регистр
+select customer_id, lower (first_name), lower (last_name)
+from customer
+where first_name = 'Kelly' or first_name = 'Willie';
+
+# Замена букв LL на PP
+select customer_id, lower (first_name), lower (last_name), replace (first_name, 'LL', 'PP')
+from customer
+where first_name = 'Kelly' or first_name = 'Willie';
 ```
 
