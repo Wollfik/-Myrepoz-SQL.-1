@@ -51,7 +51,7 @@ LIMIT 5;
 
 
 ```
-select customer_id, lower (first_name), lower (last_name), replace (first_name, 'LL', 'PP')
+select customer_id, lower (first_name), lower (last_name), replace (lower (first_name), 'll', 'pp')
 from customer
 where first_name = 'Kelly' or first_name = 'Willie';
 ```
