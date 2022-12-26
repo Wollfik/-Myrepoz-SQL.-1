@@ -22,7 +22,7 @@ where address like '% K%a %';
 
 select payment_id, amount, payment_date
 from payment
-where amount > 10 and payment_date between '2005-06-15' and '2005-06-18';
+where amount > 10 and payment_date between '2005-06-15' and '2005-06-19';
 
 ```
 
@@ -51,16 +51,6 @@ LIMIT 5;
 
 
 ```
-select customer_id, first_name, last_name
-from customer
-where first_name = 'Kelly' or first_name = 'Willie';
-
-# В нижний регистр
-select customer_id, lower (first_name), lower (last_name)
-from customer
-where first_name = 'Kelly' or first_name = 'Willie';
-
-# Замена букв LL на PP
 select customer_id, lower (first_name), lower (last_name), replace (first_name, 'LL', 'PP')
 from customer
 where first_name = 'Kelly' or first_name = 'Willie';
